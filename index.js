@@ -1,8 +1,11 @@
 const express = require('express')
-const userRoute = require("./src/routes/user.route")
-const app = express()
+const app = express();
 
-app.use("/soma", userRoute)
+const userRoute = require("./src/routes/user.route")
+
+const port = 3000;
+app.use(express.json());
+app.use("/user", userRoute);
 
 //Rota
     // Method HTTP / CRUD (CREATE, READ, UPDATE, DELETE)
@@ -16,4 +19,4 @@ app.use("/soma", userRoute)
 
     // Function (Callback) - Responsável por executar algum comando
 
-app.listen(3000)
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
