@@ -1,0 +1,25 @@
+{
+  "name": "api-breakingnews",
+  "version": "1.0.0",
+  "description": "API for SPA Breaking News",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelMachado1/api-breakingnews.git"
+  },
+  "keywords": [],
+  "author": "rafadeveloper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelMachado1/api-breakingnews/issues"
+  },
+  "homepage": "https://github.com/RafaelMachado1/api-breakingnews#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
