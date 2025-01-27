@@ -1,11 +1,18 @@
-const express = require('express')
+import express from "express"
+import connetcDatabase from "./src/database/database.js"
+import userRoute from "./src/routes/user.route.js"
+import dotenv from "dotenv"
+dotenv.config();
+
+const port = process.env.PORT || 3000;
 const app = express();
 
-const userRoute = require("./src/routes/user.route")
 
-const port = 3000;
+connetcDatabase()
 app.use(express.json());
 app.use("/user", userRoute);
+
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
 
 //Rota
     // Method HTTP / CRUD (CREATE, READ, UPDATE, DELETE)
@@ -19,4 +26,3 @@ app.use("/user", userRoute);
 
     // Function (Callback) - Responsável por executar algum comando
 
-app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
